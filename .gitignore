@@ -1,0 +1,10 @@
+.env
+.docker/
+.venv/
+.python-packages/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Runtime noise. Keep scraped Markdown and JSON run artifacts as deliverables.
+logs/*.log

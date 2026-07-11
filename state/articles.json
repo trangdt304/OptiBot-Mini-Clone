@@ -1,0 +1,605 @@
+{
+  "articles": {
+    "360026559573": {
+      "hash": "6029ed2070392a80490c6c8ca22c00b46a3327bf2093e243de3c7f9d22c3dab7",
+      "title": "How to Create and Use the Split Screen App",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/360026559573-How-to-Create-and-Use-the-Split-Screen-App",
+      "updated_at": "2026-07-09T21:32:58Z",
+      "slug": "how-to-create-and-use-the-split-screen-app-360026559573",
+      "article_path": "data/articles/how-to-create-and-use-the-split-screen-app-360026559573.md",
+      "chunk_paths": [
+        "data/chunks/how-to-create-and-use-the-split-screen-app-360026559573__chunk-001.md",
+        "data/chunks/how-to-create-and-use-the-split-screen-app-360026559573__chunk-002.md"
+      ],
+      "vector_file_ids": [
+        "file-7SwcrycABABkeYNG3qun3d",
+        "file-1LEUE3GJBKpaa4SzAyUAWA"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/how-to-create-and-use-the-split-screen-app-360026559573__chunk-001.md",
+        "data/chunks/how-to-create-and-use-the-split-screen-app-360026559573__chunk-002.md"
+      ]
+    },
+    "360047275934": {
+      "hash": "d3ce62aa31ba0d3f845bb148cffabb36e12cc78ea9e8659d3b8ebff60f2ac611",
+      "title": "Whitelist OptiSigns IP addresses & ports",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/360047275934-Whitelist-OptiSigns-IP-addresses-ports",
+      "updated_at": "2026-07-09T19:48:39Z",
+      "slug": "whitelist-optisigns-ip-addresses-ports-360047275934",
+      "article_path": "data/articles/whitelist-optisigns-ip-addresses-ports-360047275934.md",
+      "chunk_paths": [
+        "data/chunks/whitelist-optisigns-ip-addresses-ports-360047275934__chunk-001.md"
+      ],
+      "vector_file_ids": [
+        "file-6dMDX6EY6Ya89zXjGAXP62"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/whitelist-optisigns-ip-addresses-ports-360047275934__chunk-001.md"
+      ]
+    },
+    "360056086653": {
+      "hash": "e5c0604f3d22d99d0569828e4fc03658fe54a799f1e4d7d56b72fa76b79950b3",
+      "title": "How to Change Time Zone on Your Fire Stick device",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/360056086653-How-to-Change-Time-Zone-on-Your-Fire-Stick-device",
+      "updated_at": "2026-07-09T18:27:02Z",
+      "slug": "how-to-change-time-zone-on-your-fire-stick-device-360056086653",
+      "article_path": "data/articles/how-to-change-time-zone-on-your-fire-stick-device-360056086653.md",
+      "chunk_paths": [
+        "data/chunks/how-to-change-time-zone-on-your-fire-stick-device-360056086653__chunk-001.md"
+      ],
+      "vector_file_ids": [
+        "file-38ZV5csr1pjntHgaZffa4E"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/how-to-change-time-zone-on-your-fire-stick-device-360056086653__chunk-001.md"
+      ]
+    },
+    "29217646663187": {
+      "hash": "c9d89976c1831061de1ff019c644a4a91b5eff100c213224386eeb842e2b07ce",
+      "title": "How to Set Up Dynamic Data Mapping with OptiSync",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/29217646663187-How-to-Set-Up-Dynamic-Data-Mapping-with-OptiSync",
+      "updated_at": "2026-07-09T15:33:50Z",
+      "slug": "how-to-set-up-dynamic-data-mapping-with-optisync-29217646663187",
+      "article_path": "data/articles/how-to-set-up-dynamic-data-mapping-with-optisync-29217646663187.md",
+      "chunk_paths": [
+        "data/chunks/how-to-set-up-dynamic-data-mapping-with-optisync-29217646663187__chunk-001.md",
+        "data/chunks/how-to-set-up-dynamic-data-mapping-with-optisync-29217646663187__chunk-002.md",
+        "data/chunks/how-to-set-up-dynamic-data-mapping-with-optisync-29217646663187__chunk-003.md",
+        "data/chunks/how-to-set-up-dynamic-data-mapping-with-optisync-29217646663187__chunk-004.md"
+      ],
+      "vector_file_ids": [
+        "file-DBmBG1J6JCpMXP54xJKwhn",
+        "file-9Z7zevWVmLwhGCptFEfFKa",
+        "file-DeSshhc2QT4kgvHtbwKdBT",
+        "file-GRTN4cjHFKmn9cTBQiXa6p"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/how-to-set-up-dynamic-data-mapping-with-optisync-29217646663187__chunk-001.md",
+        "data/chunks/how-to-set-up-dynamic-data-mapping-with-optisync-29217646663187__chunk-002.md",
+        "data/chunks/how-to-set-up-dynamic-data-mapping-with-optisync-29217646663187__chunk-003.md",
+        "data/chunks/how-to-set-up-dynamic-data-mapping-with-optisync-29217646663187__chunk-004.md"
+      ]
+    },
+    "53095698149011": {
+      "hash": "3ab16975f0f8be9e66e427f0a29fc47881339909ae36c15f93ea97ccff15be3b",
+      "title": "Using the Japan Earthquake App",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/53095698149011-Using-the-Japan-Earthquake-App",
+      "updated_at": "2026-07-08T18:39:51Z",
+      "slug": "using-the-japan-earthquake-app-53095698149011",
+      "article_path": "data/articles/using-the-japan-earthquake-app-53095698149011.md",
+      "chunk_paths": [
+        "data/chunks/using-the-japan-earthquake-app-53095698149011__chunk-001.md"
+      ],
+      "vector_file_ids": [
+        "file-P7M3zKjJ1sYr7ThgHZ4xQH"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/using-the-japan-earthquake-app-53095698149011__chunk-001.md"
+      ]
+    },
+    "53293393593491": {
+      "hash": "2def804ec5db1fa38167db7ac01e4a8197840c77a51ad81d1e07e412943db7af",
+      "title": "Refer & Earn: OptiSigns Referral Program",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/53293393593491-Refer-Earn-OptiSigns-Referral-Program",
+      "updated_at": "2026-07-08T17:09:50Z",
+      "slug": "refer-earn-optisigns-referral-program-53293393593491",
+      "article_path": "data/articles/refer-earn-optisigns-referral-program-53293393593491.md",
+      "chunk_paths": [
+        "data/chunks/refer-earn-optisigns-referral-program-53293393593491__chunk-001.md",
+        "data/chunks/refer-earn-optisigns-referral-program-53293393593491__chunk-002.md"
+      ],
+      "vector_file_ids": [
+        "file-9c9BSVZssUUJL3wPj63udk",
+        "file-Vb3FuCd4DrH1E2H1jossyx"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/refer-earn-optisigns-referral-program-53293393593491__chunk-001.md",
+        "data/chunks/refer-earn-optisigns-referral-program-53293393593491__chunk-002.md"
+      ]
+    },
+    "360051014713": {
+      "hash": "de6b68626d83082646fde4227e9e111e06b6427fb006ac288b3342325b861396",
+      "title": "How to use YouTube with OptiSigns",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/360051014713-How-to-use-YouTube-with-OptiSigns",
+      "updated_at": "2026-07-08T15:01:25Z",
+      "slug": "how-to-use-youtube-with-optisigns-360051014713",
+      "article_path": "data/articles/how-to-use-youtube-with-optisigns-360051014713.md",
+      "chunk_paths": [
+        "data/chunks/how-to-use-youtube-with-optisigns-360051014713__chunk-001.md"
+      ],
+      "vector_file_ids": [
+        "file-UJ8E3fKcXPj1kjYwsNTTfs"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/how-to-use-youtube-with-optisigns-360051014713__chunk-001.md"
+      ]
+    },
+    "52113036672403": {
+      "hash": "41454187243f7df9526db0a2a7426663b61610dae20505c7269fa2ffe90e39d5",
+      "title": "Room Integrations: Turn Your Meeting Rooms into Digital Signage",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/52113036672403-Room-Integrations-Turn-Your-Meeting-Rooms-into-Digital-Signage",
+      "updated_at": "2026-07-08T14:58:11Z",
+      "slug": "room-integrations-turn-your-meeting-rooms-into-digital-signage-52113036672403",
+      "article_path": "data/articles/room-integrations-turn-your-meeting-rooms-into-digital-signage-52113036672403.md",
+      "chunk_paths": [
+        "data/chunks/room-integrations-turn-your-meeting-rooms-into-digital-signage-52113036672403__chunk-001.md",
+        "data/chunks/room-integrations-turn-your-meeting-rooms-into-digital-signage-52113036672403__chunk-002.md"
+      ],
+      "vector_file_ids": [
+        "file-B2pWgS8vicwQ8yFEKXustJ",
+        "file-V1FuyhSSN2uF8gpPgzefWR"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/room-integrations-turn-your-meeting-rooms-into-digital-signage-52113036672403__chunk-001.md",
+        "data/chunks/room-integrations-turn-your-meeting-rooms-into-digital-signage-52113036672403__chunk-002.md"
+      ]
+    },
+    "28598173096723": {
+      "hash": "5c9ba083cacbb51f806514f933e52b3c812e541044d88bbdb9e42e1e4a3d5f87",
+      "title": "How To Create and Use Operational Schedules (HDMI-CEC, RS-232)",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/28598173096723-How-To-Create-and-Use-Operational-Schedules-HDMI-CEC-RS-232",
+      "updated_at": "2026-07-08T14:47:07Z",
+      "slug": "how-to-create-and-use-operational-schedules-hdmi-cec-rs-232-28598173096723",
+      "article_path": "data/articles/how-to-create-and-use-operational-schedules-hdmi-cec-rs-232-28598173096723.md",
+      "chunk_paths": [
+        "data/chunks/how-to-create-and-use-operational-schedules-hdmi-cec-rs-232-28598173096723__chunk-001.md",
+        "data/chunks/how-to-create-and-use-operational-schedules-hdmi-cec-rs-232-28598173096723__chunk-002.md"
+      ],
+      "vector_file_ids": [
+        "file-MuBeAUTbNkFsriYQPgF7Tw",
+        "file-KMehRceSTtjqBvLEvFyPXy"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/how-to-create-and-use-operational-schedules-hdmi-cec-rs-232-28598173096723__chunk-001.md",
+        "data/chunks/how-to-create-and-use-operational-schedules-hdmi-cec-rs-232-28598173096723__chunk-002.md"
+      ]
+    },
+    "1500000493782": {
+      "hash": "d3fd18a28f8947a1a6e7ac67f6343eee950b3e3af25afd3eb4adc2921ae98d3e",
+      "title": "Billing: How Do I Change my Subscription Plan?",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/1500000493782-Billing-How-Do-I-Change-my-Subscription-Plan",
+      "updated_at": "2026-07-08T04:10:51Z",
+      "slug": "billing-how-do-i-change-my-subscription-plan-1500000493782",
+      "article_path": "data/articles/billing-how-do-i-change-my-subscription-plan-1500000493782.md",
+      "chunk_paths": [
+        "data/chunks/billing-how-do-i-change-my-subscription-plan-1500000493782__chunk-001.md"
+      ],
+      "vector_file_ids": [
+        "file-RQNYYbDLhcqE1ULVotuXi2"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/billing-how-do-i-change-my-subscription-plan-1500000493782__chunk-001.md"
+      ]
+    },
+    "360035538093": {
+      "hash": "2e9b6943f478c16fbd32a2d21ee0f16d764a6fec28dba09b419ecaa01665df91",
+      "title": "My image, content are bleeding off the screens with Fire TV (need screen calibration)",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/360035538093-My-image-content-are-bleeding-off-the-screens-with-Fire-TV-need-screen-calibration",
+      "updated_at": "2026-07-07T16:43:26Z",
+      "slug": "my-image-content-are-bleeding-off-the-screens-with-fire-tv-need-screen-calibrati-360035538093",
+      "article_path": "data/articles/my-image-content-are-bleeding-off-the-screens-with-fire-tv-need-screen-calibrati-360035538093.md",
+      "chunk_paths": [
+        "data/chunks/my-image-content-are-bleeding-off-the-screens-with-fire-tv-need-screen-calibrati-360035538093__chunk-001.md"
+      ],
+      "vector_file_ids": [
+        "file-8A7E6cU3iSsZoHKsm86Lz3"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/my-image-content-are-bleeding-off-the-screens-with-fire-tv-need-screen-calibrati-360035538093__chunk-001.md"
+      ]
+    },
+    "4412065189267": {
+      "hash": "32cfbae0c25ad83dc4fb2ac97fc08161ae7052600df52e4e7ca6e56e26e72589",
+      "title": "Synchronized playback (Sync Play) feature",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/4412065189267-Synchronized-playback-Sync-Play-feature",
+      "updated_at": "2026-07-06T21:29:32Z",
+      "slug": "synchronized-playback-sync-play-feature-4412065189267",
+      "article_path": "data/articles/synchronized-playback-sync-play-feature-4412065189267.md",
+      "chunk_paths": [
+        "data/chunks/synchronized-playback-sync-play-feature-4412065189267__chunk-001.md"
+      ],
+      "vector_file_ids": [
+        "file-VTR9ZARQZwJMLDP4xVM9o9"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/synchronized-playback-sync-play-feature-4412065189267__chunk-001.md"
+      ]
+    },
+    "53216900345875": {
+      "hash": "2e0d1992ea3b7013a87c73822523436a441ffb06cff3a04d293f6bf70936ebde",
+      "title": "What Access Does OptiSigns Have to My Account and Devices?",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/53216900345875-What-Access-Does-OptiSigns-Have-to-My-Account-and-Devices",
+      "updated_at": "2026-07-06T15:29:04Z",
+      "slug": "what-access-does-optisigns-have-to-my-account-and-devices-53216900345875",
+      "article_path": "data/articles/what-access-does-optisigns-have-to-my-account-and-devices-53216900345875.md",
+      "chunk_paths": [
+        "data/chunks/what-access-does-optisigns-have-to-my-account-and-devices-53216900345875__chunk-001.md",
+        "data/chunks/what-access-does-optisigns-have-to-my-account-and-devices-53216900345875__chunk-002.md"
+      ],
+      "vector_file_ids": [
+        "file-LijAJVwsiZhm1MEBTVobAW",
+        "file-UnBD6QvzUQu3LvxPiVWFvo"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/what-access-does-optisigns-have-to-my-account-and-devices-53216900345875__chunk-001.md",
+        "data/chunks/what-access-does-optisigns-have-to-my-account-and-devices-53216900345875__chunk-002.md"
+      ]
+    },
+    "360049875794": {
+      "hash": "d402d4df7d377c8a1a12f8736dcb8ec10fa5e11aa1c00052365d3995bea43cdf",
+      "title": "How to use Follow Us App",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/360049875794-How-to-use-Follow-Us-App",
+      "updated_at": "2026-07-05T19:15:39Z",
+      "slug": "how-to-use-follow-us-app-360049875794",
+      "article_path": "data/articles/how-to-use-follow-us-app-360049875794.md",
+      "chunk_paths": [
+        "data/chunks/how-to-use-follow-us-app-360049875794__chunk-001.md"
+      ],
+      "vector_file_ids": [
+        "file-T5HxRgyMh8eVfmCDzYpyiF"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/how-to-use-follow-us-app-360049875794__chunk-001.md"
+      ]
+    },
+    "360016252654": {
+      "hash": "bc0dd0b1336bf3fcd82a847204e198cbb7dd6cb3f0af7dd3698e3de9f25d2336",
+      "title": "Does OptiSigns offer Non-profit/Education discount?",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/360016252654-Does-OptiSigns-offer-Non-profit-Education-discount",
+      "updated_at": "2026-07-02T17:12:40Z",
+      "slug": "does-optisigns-offer-non-profit-education-discount-360016252654",
+      "article_path": "data/articles/does-optisigns-offer-non-profit-education-discount-360016252654.md",
+      "chunk_paths": [
+        "data/chunks/does-optisigns-offer-non-profit-education-discount-360016252654__chunk-001.md"
+      ],
+      "vector_file_ids": [
+        "file-3ZG1VSZukunSa5kwwKu9G6"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/does-optisigns-offer-non-profit-education-discount-360016252654__chunk-001.md"
+      ]
+    },
+    "53028011485715": {
+      "hash": "102a2f49c0c81e1bbfb2797fd2c0c01bdcc80fae3ed93d363a1955f1b7d3d3af",
+      "title": "How to Display a Snowflake Dashboard with OptiSigns",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/53028011485715-How-to-Display-a-Snowflake-Dashboard-with-OptiSigns",
+      "updated_at": "2026-07-01T21:59:22Z",
+      "slug": "how-to-display-a-snowflake-dashboard-with-optisigns-53028011485715",
+      "article_path": "data/articles/how-to-display-a-snowflake-dashboard-with-optisigns-53028011485715.md",
+      "chunk_paths": [
+        "data/chunks/how-to-display-a-snowflake-dashboard-with-optisigns-53028011485715__chunk-001.md",
+        "data/chunks/how-to-display-a-snowflake-dashboard-with-optisigns-53028011485715__chunk-002.md"
+      ],
+      "vector_file_ids": [
+        "file-2hkJAFUXc8ZserN8QTpmH8",
+        "file-9Xu9KGzrDz2uA2yASkJ1Y4"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/how-to-display-a-snowflake-dashboard-with-optisigns-53028011485715__chunk-001.md",
+        "data/chunks/how-to-display-a-snowflake-dashboard-with-optisigns-53028011485715__chunk-002.md"
+      ]
+    },
+    "51343184586643": {
+      "hash": "8c4a5de95c9faab83ad86ee0cef9dd23745888f7655426205a63134d16d0d21c",
+      "title": "Connect Cisco Webex Rooms to OptiSigns Digital Signage",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/51343184586643-Connect-Cisco-Webex-Rooms-to-OptiSigns-Digital-Signage",
+      "updated_at": "2026-07-01T16:55:46Z",
+      "slug": "connect-cisco-webex-rooms-to-optisigns-digital-signage-51343184586643",
+      "article_path": "data/articles/connect-cisco-webex-rooms-to-optisigns-digital-signage-51343184586643.md",
+      "chunk_paths": [
+        "data/chunks/connect-cisco-webex-rooms-to-optisigns-digital-signage-51343184586643__chunk-001.md",
+        "data/chunks/connect-cisco-webex-rooms-to-optisigns-digital-signage-51343184586643__chunk-002.md",
+        "data/chunks/connect-cisco-webex-rooms-to-optisigns-digital-signage-51343184586643__chunk-003.md"
+      ],
+      "vector_file_ids": [
+        "file-MJjemYVSX58HANJvrgXvQo",
+        "file-YX5vMpg6ddxfaTaXFMHgo4",
+        "file-1hFHvL7EZHGmB6yin29egN"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/connect-cisco-webex-rooms-to-optisigns-digital-signage-51343184586643__chunk-001.md",
+        "data/chunks/connect-cisco-webex-rooms-to-optisigns-digital-signage-51343184586643__chunk-002.md",
+        "data/chunks/connect-cisco-webex-rooms-to-optisigns-digital-signage-51343184586643__chunk-003.md"
+      ]
+    },
+    "360054298754": {
+      "hash": "daf44f7cde0718339ef309cd37976a5f751a14e2de34230a9ead8f23fafd8c5c",
+      "title": "How to Factory Reset Your Fire Stick device ",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/360054298754-How-to-Factory-Reset-Your-Fire-Stick-device",
+      "updated_at": "2026-07-01T13:59:15Z",
+      "slug": "how-to-factory-reset-your-fire-stick-device-360054298754",
+      "article_path": "data/articles/how-to-factory-reset-your-fire-stick-device-360054298754.md",
+      "chunk_paths": [
+        "data/chunks/how-to-factory-reset-your-fire-stick-device-360054298754__chunk-001.md"
+      ],
+      "vector_file_ids": [
+        "file-6LG4vAturLb9dTSP1BXJhw"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/how-to-factory-reset-your-fire-stick-device-360054298754__chunk-001.md"
+      ]
+    },
+    "27690296225555": {
+      "hash": "ec9caaa6b330a039883eb04f285467ab71e4984d0f6d832f8480b803119d4961",
+      "title": "AI Camera App - Quick Start",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/27690296225555-AI-Camera-App-Quick-Start",
+      "updated_at": "2026-06-29T19:26:02Z",
+      "slug": "ai-camera-app-quick-start-27690296225555",
+      "article_path": "data/articles/ai-camera-app-quick-start-27690296225555.md",
+      "chunk_paths": [
+        "data/chunks/ai-camera-app-quick-start-27690296225555__chunk-001.md",
+        "data/chunks/ai-camera-app-quick-start-27690296225555__chunk-002.md"
+      ],
+      "vector_file_ids": [
+        "file-VZdTEzC8GkjEpM2UNFC9v4",
+        "file-3Dxo65dxnhMFeFro28gNba"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/ai-camera-app-quick-start-27690296225555__chunk-001.md",
+        "data/chunks/ai-camera-app-quick-start-27690296225555__chunk-002.md"
+      ]
+    },
+    "23565267463315": {
+      "hash": "592b7a2b16e186645a8176926a2364260c3a3b1e83ff3aac8770dcb196861b2e",
+      "title": "Engage Plan - FAQs",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/23565267463315-Engage-Plan-FAQs",
+      "updated_at": "2026-06-29T19:25:18Z",
+      "slug": "engage-plan-faqs-23565267463315",
+      "article_path": "data/articles/engage-plan-faqs-23565267463315.md",
+      "chunk_paths": [
+        "data/chunks/engage-plan-faqs-23565267463315__chunk-001.md"
+      ],
+      "vector_file_ids": [
+        "file-R6z9DYWoygcUruJaNAD7jD"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/engage-plan-faqs-23565267463315__chunk-001.md"
+      ]
+    },
+    "360042143753": {
+      "hash": "4b23b71293350beac3e19af0fcf1486121051b5bc5eb01521931d232cb92cd0e",
+      "title": "How to re-encode video files for better compatibility on your devices",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/360042143753-How-to-re-encode-video-files-for-better-compatibility-on-your-devices",
+      "updated_at": "2026-06-29T19:08:36Z",
+      "slug": "how-to-re-encode-video-files-for-better-compatibility-on-your-devices-360042143753",
+      "article_path": "data/articles/how-to-re-encode-video-files-for-better-compatibility-on-your-devices-360042143753.md",
+      "chunk_paths": [
+        "data/chunks/how-to-re-encode-video-files-for-better-compatibility-on-your-devices-360042143753__chunk-001.md"
+      ],
+      "vector_file_ids": [
+        "file-GPsAGZWWpP1nn6Tthg32iQ"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/how-to-re-encode-video-files-for-better-compatibility-on-your-devices-360042143753__chunk-001.md"
+      ]
+    },
+    "360055328454": {
+      "hash": "bfc460dbfde3f27557a2918f6d90879c55b76623cb8b782502567ca46ffac2c9",
+      "title": "How to Enable/Disable Auto Update for OptiSigns app on Fire TV",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/360055328454-How-to-Enable-Disable-Auto-Update-for-OptiSigns-app-on-Fire-TV",
+      "updated_at": "2026-06-28T17:13:26Z",
+      "slug": "how-to-enable-disable-auto-update-for-optisigns-app-on-fire-tv-360055328454",
+      "article_path": "data/articles/how-to-enable-disable-auto-update-for-optisigns-app-on-fire-tv-360055328454.md",
+      "chunk_paths": [
+        "data/chunks/how-to-enable-disable-auto-update-for-optisigns-app-on-fire-tv-360055328454__chunk-001.md"
+      ],
+      "vector_file_ids": [
+        "file-1EqqYkKSstLR9W9VPMfNDZ"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/how-to-enable-disable-auto-update-for-optisigns-app-on-fire-tv-360055328454__chunk-001.md"
+      ]
+    },
+    "360025661053": {
+      "hash": "943e096dec983993ba7e1f2256157a57cf77b161ce8b999ded6cc50d6ca31a18",
+      "title": "How Can I Remove/Delete Uploaded Files or Assets?",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/360025661053-How-Can-I-Remove-Delete-Uploaded-Files-or-Assets",
+      "updated_at": "2026-06-26T20:54:46Z",
+      "slug": "how-can-i-remove-delete-uploaded-files-or-assets-360025661053",
+      "article_path": "data/articles/how-can-i-remove-delete-uploaded-files-or-assets-360025661053.md",
+      "chunk_paths": [
+        "data/chunks/how-can-i-remove-delete-uploaded-files-or-assets-360025661053__chunk-001.md"
+      ],
+      "vector_file_ids": [
+        "file-54rL2zgxrzipzK38PGgXhj"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/how-can-i-remove-delete-uploaded-files-or-assets-360025661053__chunk-001.md"
+      ]
+    },
+    "21708242980755": {
+      "hash": "332ae85f391888599462175e10052f3d8dae5f49bd170cebf4882b8ee2b8e548",
+      "title": "How to Share Playlist and Folder with External Users",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/21708242980755-How-to-Share-Playlist-and-Folder-with-External-Users",
+      "updated_at": "2026-06-26T13:56:08Z",
+      "slug": "how-to-share-playlist-and-folder-with-external-users-21708242980755",
+      "article_path": "data/articles/how-to-share-playlist-and-folder-with-external-users-21708242980755.md",
+      "chunk_paths": [
+        "data/chunks/how-to-share-playlist-and-folder-with-external-users-21708242980755__chunk-001.md",
+        "data/chunks/how-to-share-playlist-and-folder-with-external-users-21708242980755__chunk-002.md"
+      ],
+      "vector_file_ids": [
+        "file-AiVfFvGHxvKXUfNNbg7LwU",
+        "file-XT9T1hCD2kn4rNQjYxMA6D"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/how-to-share-playlist-and-folder-with-external-users-21708242980755__chunk-001.md",
+        "data/chunks/how-to-share-playlist-and-folder-with-external-users-21708242980755__chunk-002.md"
+      ]
+    },
+    "40147900639891": {
+      "hash": "d749d2f344ab38c7bf374315c025e224d319d7813d9ccade330d7f813ab4e2d6",
+      "title": "OptiStick Troubleshooting Guide",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/40147900639891-OptiStick-Troubleshooting-Guide",
+      "updated_at": "2026-06-26T13:52:36Z",
+      "slug": "optistick-troubleshooting-guide-40147900639891",
+      "article_path": "data/articles/optistick-troubleshooting-guide-40147900639891.md",
+      "chunk_paths": [
+        "data/chunks/optistick-troubleshooting-guide-40147900639891__chunk-001.md",
+        "data/chunks/optistick-troubleshooting-guide-40147900639891__chunk-002.md",
+        "data/chunks/optistick-troubleshooting-guide-40147900639891__chunk-003.md",
+        "data/chunks/optistick-troubleshooting-guide-40147900639891__chunk-004.md"
+      ],
+      "vector_file_ids": [
+        "file-BGqDo2wKyZwdiQnhBZqwWY",
+        "file-Ca4g5gBhkrtjPnFeLfB678",
+        "file-YB6oGe6fHkqWuZWo1kMk1h",
+        "file-Rs5wZGeBE2WAup8GeokBL2"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/optistick-troubleshooting-guide-40147900639891__chunk-001.md",
+        "data/chunks/optistick-troubleshooting-guide-40147900639891__chunk-002.md",
+        "data/chunks/optistick-troubleshooting-guide-40147900639891__chunk-003.md",
+        "data/chunks/optistick-troubleshooting-guide-40147900639891__chunk-004.md"
+      ]
+    },
+    "27267311796243": {
+      "hash": "98c7a9f586c2aee788c2ddc211d2ba216bd2d1fde2ef0be67b431ac57dee7382",
+      "title": "OptiStick",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/27267311796243-OptiStick",
+      "updated_at": "2026-06-26T13:51:49Z",
+      "slug": "optistick-27267311796243",
+      "article_path": "data/articles/optistick-27267311796243.md",
+      "chunk_paths": [
+        "data/chunks/optistick-27267311796243__chunk-001.md",
+        "data/chunks/optistick-27267311796243__chunk-002.md"
+      ],
+      "vector_file_ids": [
+        "file-EWU3Ez8DKizpxgV4Aw1asm",
+        "file-QehJKQoCPn9cDpFFU6rim5"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/optistick-27267311796243__chunk-001.md",
+        "data/chunks/optistick-27267311796243__chunk-002.md"
+      ]
+    },
+    "10259143299219": {
+      "hash": "a41227d2b87c5578f655433449f47c4f13c5d38a69962d33b48848d229f6f84e",
+      "title": "How to use Website Screenshot app",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/10259143299219-How-to-use-Website-Screenshot-app",
+      "updated_at": "2026-06-25T19:46:15Z",
+      "slug": "how-to-use-website-screenshot-app-10259143299219",
+      "article_path": "data/articles/how-to-use-website-screenshot-app-10259143299219.md",
+      "chunk_paths": [
+        "data/chunks/how-to-use-website-screenshot-app-10259143299219__chunk-001.md"
+      ],
+      "vector_file_ids": [
+        "file-UVRiq51y2v5iC97XF28Dby"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/how-to-use-website-screenshot-app-10259143299219__chunk-001.md"
+      ]
+    },
+    "360037391854": {
+      "hash": "f4c304ed10e455744626a0b412c3f9f3f769c038d0073ecf56168ba42f3d3c1a",
+      "title": "How to display content inside websites that require login?",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/360037391854-How-to-display-content-inside-websites-that-require-login",
+      "updated_at": "2026-06-25T12:33:44Z",
+      "slug": "how-to-display-content-inside-websites-that-require-login-360037391854",
+      "article_path": "data/articles/how-to-display-content-inside-websites-that-require-login-360037391854.md",
+      "chunk_paths": [
+        "data/chunks/how-to-display-content-inside-websites-that-require-login-360037391854__chunk-001.md"
+      ],
+      "vector_file_ids": [
+        "file-8eHLjTFjhJHFPwUwtYUT4y"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/how-to-display-content-inside-websites-that-require-login-360037391854__chunk-001.md"
+      ]
+    },
+    "52350277262483": {
+      "hash": "ec06ea6fb582a7bec41b0f550075223691430b5c4b60dea5dda35fae11884398",
+      "title": "Connect Microsoft Teams Rooms to OptiSigns Digital Signage",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/52350277262483-Connect-Microsoft-Teams-Rooms-to-OptiSigns-Digital-Signage",
+      "updated_at": "2026-06-24T18:39:16Z",
+      "slug": "connect-microsoft-teams-rooms-to-optisigns-digital-signage-52350277262483",
+      "article_path": "data/articles/connect-microsoft-teams-rooms-to-optisigns-digital-signage-52350277262483.md",
+      "chunk_paths": [
+        "data/chunks/connect-microsoft-teams-rooms-to-optisigns-digital-signage-52350277262483__chunk-001.md",
+        "data/chunks/connect-microsoft-teams-rooms-to-optisigns-digital-signage-52350277262483__chunk-002.md",
+        "data/chunks/connect-microsoft-teams-rooms-to-optisigns-digital-signage-52350277262483__chunk-003.md"
+      ],
+      "vector_file_ids": [
+        "file-QkupnoQUmkBfAUnEDbNibj",
+        "file-79NNoKv3WQAu9Qg5tFKi6J",
+        "file-6GPsCtCgbsAgijdnQXUdsK"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/connect-microsoft-teams-rooms-to-optisigns-digital-signage-52350277262483__chunk-001.md",
+        "data/chunks/connect-microsoft-teams-rooms-to-optisigns-digital-signage-52350277262483__chunk-002.md",
+        "data/chunks/connect-microsoft-teams-rooms-to-optisigns-digital-signage-52350277262483__chunk-003.md"
+      ]
+    },
+    "17129313173395": {
+      "hash": "3e4ef380d835e5b8b64aa4c24cb1657c4f7d00d2866333b6122ad1069c8b7e7d",
+      "title": "How to manage Sub-Account billing with OptiSigns",
+      "html_url": "https://support.optisigns.com/hc/en-us/articles/17129313173395-How-to-manage-Sub-Account-billing-with-OptiSigns",
+      "updated_at": "2026-06-24T17:40:46Z",
+      "slug": "how-to-manage-sub-account-billing-with-optisigns-17129313173395",
+      "article_path": "data/articles/how-to-manage-sub-account-billing-with-optisigns-17129313173395.md",
+      "chunk_paths": [
+        "data/chunks/how-to-manage-sub-account-billing-with-optisigns-17129313173395__chunk-001.md"
+      ],
+      "vector_file_ids": [
+        "file-AjZhuiekZw9rthDJRUfFj4"
+      ],
+      "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+      "gemini_file_search_uploaded_chunks": [
+        "data/chunks/how-to-manage-sub-account-billing-with-optisigns-17129313173395__chunk-001.md"
+      ]
+    }
+  },
+  "vector_store_id": "vs_6a50b4010a0c8191a2f54f28dbe47e9b",
+  "gemini_file_search_store_name": "fileSearchStores/optibothelpcenter-z6aqjox7ar0c",
+  "gemini_file_search_store_display_name": "optibot-help-center",
+  "gemini_embedding_model": "models/gemini-embedding-2"
+}

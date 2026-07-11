@@ -1,0 +1,104 @@
+services:
+  web:
+    build: .
+    image: optibot-indexer:local
+    environment:
+      CHAT_PROVIDER: ${CHAT_PROVIDER:-gemini}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:?Set GEMINI_API_KEY in .env}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-3.1-flash-lite}
+      GEMINI_FILE_SEARCH_STORE_NAME: ${GEMINI_FILE_SEARCH_STORE_NAME:-}
+      CHUNK_DIR: ${CHUNK_DIR:-data/chunks}
+      STATE_FILE: ${STATE_FILE:-state/articles.json}
+      LOG_DIR: ${LOG_DIR:-logs}
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./state:/app/state
+      - ./logs:/app/logs
+    command:
+      - uvicorn
+      - web_app:app
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8000"
+
+  optibot:
+    build: .
+    image: optibot-indexer:local
+    environment:
+      CHAT_PROVIDER: ${CHAT_PROVIDER:-gemini}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:?Set GEMINI_API_KEY in .env}
+      GEMINI_BASE_URL: ${GEMINI_BASE_URL:-https://generativelanguage.googleapis.com/v1beta/openai/}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-3.1-flash-lite}
+      GEMINI_FILE_SEARCH_STORE_NAME: ${GEMINI_FILE_SEARCH_STORE_NAME:-}
+      CHUNK_DIR: ${CHUNK_DIR:-data/chunks}
+      STATE_FILE: ${STATE_FILE:-state/articles.json}
+    volumes:
+      - ./data:/app/data
+      - ./state:/app/state
+      - ./logs:/app/logs
+    command:
+      - python
+      - main.py
+      - --ask
+      - ${QUESTION:-How do I add a YouTube video in OptiSigns?}
+
+  indexer:
+    profiles:
+      - index
+    build: .
+    image: optibot-indexer:local
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./state:/app/state
+      - ./logs:/app/logs
+    command:
+      - python
+      - main.py
+      - --skip-upload
+
+  uploader:
+    profiles:
+      - upload
+    build: .
+    image: optibot-indexer:local
+    environment:
+      GEMINI_API_KEY: ${GEMINI_API_KEY:?Set GEMINI_API_KEY in .env}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-3.1-flash-lite}
+      GEMINI_FILE_SEARCH_STORE_NAME: ${GEMINI_FILE_SEARCH_STORE_NAME:-}
+      GEMINI_FILE_SEARCH_STORE_DISPLAY_NAME: ${GEMINI_FILE_SEARCH_STORE_DISPLAY_NAME:-optibot-help-center}
+      GEMINI_EMBEDDING_MODEL: ${GEMINI_EMBEDDING_MODEL:-models/gemini-embedding-2}
+      UPLOAD_PROVIDER: ${UPLOAD_PROVIDER:-gemini}
+      UPLOAD_ENABLED: "true"
+      ARTICLE_LIMIT: ${ARTICLE_LIMIT:-30}
+      OPTISIGNS_HELP_CENTER_URL: ${OPTISIGNS_HELP_CENTER_URL:-https://support.optisigns.com}
+      ZENDESK_LOCALE: ${ZENDESK_LOCALE:-en-us}
+      OUTPUT_DIR: ${OUTPUT_DIR:-data/articles}
+      CHUNK_DIR: ${CHUNK_DIR:-data/chunks}
+      STATE_FILE: ${STATE_FILE:-state/articles.json}
+      LOG_DIR: ${LOG_DIR:-logs}
+      CHUNK_MAX_WORDS: ${CHUNK_MAX_WORDS:-700}
+      HTTP_TIMEOUT_SECONDS: ${HTTP_TIMEOUT_SECONDS:-30}
+    volumes:
+      - ./data:/app/data
+      - ./state:/app/state
+      - ./logs:/app/logs
+    command:
+      - python
+      - main.py
+      - --upload
+
+  tests:
+    profiles:
+      - test
+    build: .
+    image: optibot-indexer:local
+    command:
+      - python
+      - -m
+      - unittest
+      - discover

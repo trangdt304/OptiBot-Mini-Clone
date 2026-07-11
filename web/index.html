@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OptiBot</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="chat-pane" aria-label="Chat">
+        <header class="topbar">
+          <div class="brand-mark" aria-hidden="true">
+            <span></span>
+          </div>
+          <div>
+            <h1>OptiBot</h1>
+            <p id="statusLine">Connecting...</p>
+          </div>
+        </header>
+
+        <div id="messages" class="messages" aria-live="polite"></div>
+
+        <form id="chatForm" class="composer">
+          <label class="sr-only" for="questionInput">Question</label>
+          <textarea
+            id="questionInput"
+            name="question"
+            rows="1"
+            maxlength="1000"
+            autocomplete="off"
+            placeholder="OptiSigns topic..."
+          ></textarea>
+          <button id="sendButton" type="submit" aria-label="Send">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h13M13 6l6 6-6 6" />
+            </svg>
+          </button>
+        </form>
+      </section>
+
+      <aside class="source-pane" aria-label="Sources">
+        <div class="source-head">
+          <h2>Sources</h2>
+          <p id="sourceMeta">No citations yet</p>
+        </div>
+        <div id="sources" class="sources"></div>
+      </aside>
+    </main>
+
+    <script src="/assets/app.js"></script>
+  </body>
+</html>

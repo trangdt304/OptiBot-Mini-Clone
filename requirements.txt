@@ -1,0 +1,8 @@
+beautifulsoup4>=4.12.3
+fastapi>=0.115.0
+google-genai>=1.0.0
+html2text>=2024.2.26
+openai>=1.59.0,<3.0.0
+python-dotenv>=1.0.1
+requests>=2.32.3
+uvicorn[standard]>=0.30.0
