@@ -1,0 +1,48 @@
+name: Daily OptiBot Indexer
+
+on:
+  schedule:
+    # 03:00 Asia/Bangkok. GitHub cron uses UTC.
+    - cron: "0 20 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: optibot-daily-indexer
+  cancel-in-progress: false
+
+jobs:
+  indexer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_FILE_SEARCH_STORE_NAME: ${{ secrets.GEMINI_FILE_SEARCH_STORE_NAME }}
+      CHAT_PROVIDER: gemini
+      GEMINI_MODEL: gemini-3.1-flash-lite
+      GEMINI_FILE_SEARCH_STORE_DISPLAY_NAME: optibot-help-center
+      GEMINI_EMBEDDING_MODEL: models/gemini-embedding-2
+      UPLOAD_PROVIDER: gemini
+      UPLOAD_ENABLED: "true"
+      ARTICLE_LIMIT: "30"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Validate required secrets
+        run: |
+          test -n "$GEMINI_API_KEY" || (echo "Missing GEMINI_API_KEY repository secret" && exit 1)
+          test -n "$GEMINI_FILE_SEARCH_STORE_NAME" || (echo "Missing GEMINI_FILE_SEARCH_STORE_NAME repository secret" && exit 1)
+
+      - name: Run indexer and upload changed chunks to Gemini File Search
+        run: python main.py --upload
