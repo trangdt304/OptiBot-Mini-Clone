@@ -2,8 +2,8 @@ name: Daily OptiBot Indexer
 
 on:
   schedule:
-    # 03:00 Asia/Bangkok. GitHub cron uses UTC.
-    - cron: "0 20 * * *"
+    # 17:00 Asia/Bangkok. GitHub cron uses UTC.
+    - cron: "0 10 * * *"
   workflow_dispatch:
 
 concurrency:
