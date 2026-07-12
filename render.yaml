@@ -1,9 +1,10 @@
 services:
-  - type: cron
-    name: optibot-indexer
+  - type: web
+    name: optibot-chatbot
     runtime: docker
-    schedule: "0 3 * * *"
+    plan: free
     dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/status
     envVars:
       - key: GEMINI_API_KEY
         sync: false
@@ -13,13 +14,3 @@ services:
         value: "gemini-3.1-flash-lite"
       - key: GEMINI_FILE_SEARCH_STORE_NAME
         sync: false
-      - key: GEMINI_FILE_SEARCH_STORE_DISPLAY_NAME
-        value: "optibot-help-center"
-      - key: GEMINI_EMBEDDING_MODEL
-        value: "models/gemini-embedding-2"
-      - key: UPLOAD_PROVIDER
-        value: "gemini"
-      - key: ARTICLE_LIMIT
-        value: "30"
-      - key: UPLOAD_ENABLED
-        value: "true"

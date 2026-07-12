@@ -38,11 +38,12 @@ def status() -> dict[str, Any]:
     config = runtime_config()
     state = read_json(config.state_file, {})
     articles = state.get("articles", {})
+    store_name = config.gemini_file_search_store_name or state.get("gemini_file_search_store_name")
     return {
         "provider": config.chat_provider,
         "model": config.gemini_model if config.chat_provider == "gemini" else config.openai_chat_model,
-        "retrieval": "gemini_file_search" if state.get("gemini_file_search_store_name") else "local_chunks",
-        "gemini_file_search_store_name": state.get("gemini_file_search_store_name"),
+        "retrieval": "gemini_file_search" if store_name else "local_chunks",
+        "gemini_file_search_store_name": store_name,
         "article_count": len(articles),
         "chunk_count": sum(len(article.get("chunk_paths", [])) for article in articles.values()),
     }

@@ -65,28 +65,40 @@ Tests: `python -m unittest discover`
 - Tracks SHA-256 article hashes and Gemini store metadata in `state/articles.json`; persist this file to reuse the same Gemini File Search store.
 - Logs `added`, `updated`, `skipped`, uploaded file count, and embedded chunk count to `logs/latest.json`.
 
-## Daily Job
+## Deployment
 
-`render.yaml` defines a Render cron job that runs the Docker image daily at `03:00 UTC`:
+This project separates the public chatbot UI from the daily indexing job:
 
-```yaml
-type: cron
-schedule: "0 3 * * *"
+- Render hosts the FastAPI chatbot UI from `web_app.py`.
+- GitHub Actions runs the daily article index/upload job.
+
+`render.yaml` defines a Render web service. The Docker image default command is:
+
+```bash
+uvicorn web_app:app --host 0.0.0.0 --port ${PORT:-8000}
 ```
 
-The Docker image default command is:
+Set these Render environment variables before deploying:
+
+- `GEMINI_API_KEY`
+- `GEMINI_FILE_SEARCH_STORE_NAME`
+- `CHAT_PROVIDER=gemini`
+- `GEMINI_MODEL=gemini-3.1-flash-lite`
+
+The daily job lives in `.github/workflows/daily-index.yml` as `Daily OptiBot Indexer` and runs at `03:00 Asia/Bangkok`:
 
 ```bash
 python main.py --upload
 ```
 
-Set `GEMINI_API_KEY` as a Render secret before deploying. The job uses `UPLOAD_PROVIDER=gemini` and uploads changed chunks to Gemini File Search.
+Set these GitHub repository secrets under Settings -> Secrets and variables -> Actions:
 
-After deployment, paste the Render run log URL here:
+- `GEMINI_API_KEY`
+- `GEMINI_FILE_SEARCH_STORE_NAME`
 
-Daily job logs: `TODO: add Render cron log URL`
+Use the Actions tab to trigger `Daily OptiBot Indexer` manually for a smoke test.
 
-Persist `state/` and `logs/` with a platform disk, artifact store, or object storage; the delta uploader depends on that state between runs. If state persistence is unavailable, set `GEMINI_FILE_SEARCH_STORE_NAME` to the current store in `state/articles.json`.
+Because GitHub-hosted runners are ephemeral, `GEMINI_FILE_SEARCH_STORE_NAME` should point at the current Gemini File Search store. This avoids creating a new store on every scheduled run.
 
 ## Screenshot
 
