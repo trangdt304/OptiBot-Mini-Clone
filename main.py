@@ -32,6 +32,7 @@ SYSTEM_PROMPT = """You are OptiBot, the customer-support bot for OptiSigns.com.
 
 CLEANER_VERSION = "2026-07-10.2"
 GEMINI_OPENAI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
+GEMINI_FILE_SEARCH_STORE_PREFIX = "fileSearchStores/"
 GEMINI_DEFAULT_FILE_SEARCH_STORE_DISPLAY_NAME = "optibot-help-center"
 GEMINI_DEFAULT_EMBEDDING_MODEL = "models/gemini-embedding-2"
 LOCAL_RAG_PROMPT = """You are OptiBot, the customer-support bot for OptiSigns.com.
@@ -406,7 +407,14 @@ def classify_and_write(
             )
             or (
                 config.upload_provider == "gemini"
-                and not (previous or {}).get("gemini_file_search_store_name")
+                and (
+                    not (previous or {}).get("gemini_file_search_store_name")
+                    or (
+                        config.gemini_file_search_store_name
+                        and (previous or {}).get("gemini_file_search_store_name")
+                        != config.gemini_file_search_store_name
+                    )
+                )
             )
         )
 
@@ -441,6 +449,7 @@ def classify_and_write(
                 "status": status,
                 "title": article.get("title"),
                 "chunk_paths": chunk_paths,
+                "old_chunk_paths": old_chunk_paths,
                 "old_vector_file_ids": prior_file_ids,
             }
         )
@@ -586,12 +595,75 @@ def create_gemini_file_search_store(client: Any, config: Config) -> Any:
     return store
 
 
+def is_gemini_file_search_store_name(store_name: str) -> bool:
+    return store_name.startswith(GEMINI_FILE_SEARCH_STORE_PREFIX) and len(store_name) > len(GEMINI_FILE_SEARCH_STORE_PREFIX)
+
+
+def gemini_file_search_store_name_message(store_name: str) -> str:
+    return (
+        "GEMINI_FILE_SEARCH_STORE_NAME must be the Gemini resource name, for example "
+        f"{GEMINI_FILE_SEARCH_STORE_PREFIX}abc123. Current value is {store_name!r}; "
+        "do not use the display name like optibot-help-center."
+    )
+
+
+def ensure_gemini_file_search_store(client: Any, store_name: str) -> None:
+    if not is_gemini_file_search_store_name(store_name):
+        raise RuntimeError(gemini_file_search_store_name_message(store_name))
+    try:
+        client.file_search_stores.get(name=store_name)
+    except Exception as exc:  # noqa: BLE001 - SDK exceptions vary by version.
+        raise RuntimeError(
+            "Gemini File Search store could not be accessed. Verify that "
+            "GEMINI_FILE_SEARCH_STORE_NAME exists and was created with the same "
+            f"Gemini API key/project: {store_name}"
+        ) from exc
+
+
+def is_gemini_store_unavailable_error(exc: Exception) -> bool:
+    message = str(exc).lower()
+    return (
+        "file search store could not be accessed" in message
+        or "does not exist" in message
+        or "do not have permission" in message
+        or "permission management" in message
+        or "permission_denied" in message
+        or "permission denied" in message
+        or "not_found" in message
+        or "not found" in message
+    )
+
+
 def delete_gemini_file_search_store(client: Any, store_name: str) -> None:
     try:
         client.file_search_stores.delete(name=store_name, config={"force": True})
         logging.info("Deleted old Gemini File Search store %s", store_name)
     except Exception as exc:  # noqa: BLE001 - best effort cleanup only.
         logging.warning("Could not delete old Gemini File Search store %s: %s", store_name, exc)
+
+
+def delete_gemini_documents_by_display_name(client: Any, store_name: str, display_names: set[str]) -> int:
+    if not display_names:
+        return 0
+    documents = getattr(client.file_search_stores, "documents", None)
+    if documents is None:
+        logging.warning("Gemini SDK does not expose File Search documents; skipping stale document cleanup.")
+        return 0
+
+    deleted = 0
+    try:
+        for document in documents.list(parent=store_name):
+            payload = plain_object(document)
+            display_name = payload.get("display_name") or payload.get("displayName")
+            name = payload.get("name")
+            if display_name not in display_names or not name:
+                continue
+            documents.delete(name=name, config={"force": True})
+            deleted += 1
+            logging.info("Deleted stale Gemini File Search document %s", name)
+    except Exception as exc:  # noqa: BLE001 - cleanup should not block fresh uploads.
+        logging.warning("Could not clean stale Gemini File Search documents in %s: %s", store_name, exc)
+    return deleted
 
 
 def all_state_chunk_paths(state: dict[str, Any]) -> list[Path]:
@@ -608,11 +680,37 @@ def all_state_chunk_paths(state: dict[str, Any]) -> list[Path]:
     return chunk_paths
 
 
+def changed_gemini_chunk_paths(changed: list[dict[str, Any]]) -> list[Path]:
+    chunk_paths: list[Path] = []
+    seen: set[str] = set()
+    for item in changed:
+        for raw_path in item.get("chunk_paths", []):
+            path = Path(raw_path)
+            key = path.as_posix()
+            if key in seen or not path.exists():
+                continue
+            seen.add(key)
+            chunk_paths.append(path)
+    return chunk_paths
+
+
+def stale_gemini_document_display_names(changed: list[dict[str, Any]]) -> set[str]:
+    display_names: set[str] = set()
+    for item in changed:
+        for raw_path in item.get("old_chunk_paths", []):
+            display_names.add(Path(raw_path).name)
+        for raw_path in item.get("chunk_paths", []):
+            display_names.add(Path(raw_path).name)
+    return display_names
+
+
 def upload_gemini_changed_chunks(config: Config, state: dict[str, Any], changed: list[dict[str, Any]]) -> dict[str, Any]:
     if not config.upload_enabled:
         return {"enabled": False, "uploaded_files": 0, "embedded_chunks": 0}
 
     store_name = config.gemini_file_search_store_name or state.get("gemini_file_search_store_name")
+    if not isinstance(store_name, str):
+        store_name = None
     if not changed and store_name:
         return {
             "enabled": True,
@@ -622,19 +720,24 @@ def upload_gemini_changed_chunks(config: Config, state: dict[str, Any], changed:
             "embedded_chunks": 0,
         }
 
-    chunk_paths = all_state_chunk_paths(state)
+    reuse_existing_store = bool(store_name)
+    chunk_paths = changed_gemini_chunk_paths(changed) if reuse_existing_store else all_state_chunk_paths(state)
     if not chunk_paths:
         return {"enabled": True, "provider": "gemini", "uploaded_files": 0, "embedded_chunks": 0}
 
     client = gemini_client(config)
     if store_name:
-        delete_gemini_file_search_store(client, store_name)
-
-    store = create_gemini_file_search_store(client, config)
-    store_name = store.name
-    state["gemini_file_search_store_name"] = store_name
-    state["gemini_file_search_store_display_name"] = config.gemini_file_search_store_display_name
-    state["gemini_embedding_model"] = config.gemini_embedding_model
+        ensure_gemini_file_search_store(client, store_name)
+        delete_gemini_documents_by_display_name(client, store_name, stale_gemini_document_display_names(changed))
+        state["gemini_file_search_store_name"] = store_name
+        state["gemini_file_search_store_display_name"] = config.gemini_file_search_store_display_name
+        state["gemini_embedding_model"] = config.gemini_embedding_model
+    else:
+        store = create_gemini_file_search_store(client, config)
+        store_name = store.name
+        state["gemini_file_search_store_name"] = store_name
+        state["gemini_file_search_store_display_name"] = config.gemini_file_search_store_display_name
+        state["gemini_embedding_model"] = config.gemini_embedding_model
 
     uploaded_files: list[str] = []
     for chunk_path in chunk_paths:
@@ -729,10 +832,18 @@ def chat_client_settings(config: Config) -> tuple[str, str, str]:
 
 def resolve_gemini_file_search_store_name(config: Config) -> str | None:
     if config.gemini_file_search_store_name:
-        return config.gemini_file_search_store_name
+        if is_gemini_file_search_store_name(config.gemini_file_search_store_name):
+            return config.gemini_file_search_store_name
+        logging.warning(gemini_file_search_store_name_message(config.gemini_file_search_store_name))
+        return None
     state = read_json(config.state_file, {})
     store_name = state.get("gemini_file_search_store_name")
-    return store_name if isinstance(store_name, str) and store_name else None
+    if not isinstance(store_name, str) or not store_name:
+        return None
+    if is_gemini_file_search_store_name(store_name):
+        return store_name
+    logging.warning(gemini_file_search_store_name_message(store_name))
+    return None
 
 
 def extract_gemini_interaction_response(interaction: Any) -> tuple[str, list[dict[str, Any]]]:
@@ -799,7 +910,16 @@ def answer_question(config: Config, question: str, *, top_k: int) -> dict[str, A
     if config.chat_provider == "gemini":
         store_name = resolve_gemini_file_search_store_name(config)
         if store_name:
-            return answer_question_with_gemini_file_search(config, question, store_name)
+            try:
+                return answer_question_with_gemini_file_search(config, question, store_name)
+            except Exception as exc:  # noqa: BLE001 - fall back to local RAG when the remote store is stale.
+                if not is_gemini_store_unavailable_error(exc):
+                    raise
+                logging.warning(
+                    "Gemini File Search store %s is unavailable; falling back to local chunks: %s",
+                    store_name,
+                    exc,
+                )
 
     results = search_local_chunks(config.chunk_dir, question, limit=top_k)
     if not results:

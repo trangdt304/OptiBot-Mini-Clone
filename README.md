@@ -81,7 +81,7 @@ uvicorn web_app:app --host 0.0.0.0 --port ${PORT:-8000}
 Set these Render environment variables before deploying:
 
 - `GEMINI_API_KEY`
-- `GEMINI_FILE_SEARCH_STORE_NAME`
+- `GEMINI_FILE_SEARCH_STORE_NAME` - the resource name returned by Gemini, for example `fileSearchStores/abc123`, not the display name.
 - `CHAT_PROVIDER=gemini`
 - `GEMINI_MODEL=gemini-3.1-flash-lite`
 
@@ -94,11 +94,11 @@ python main.py --upload
 Set these GitHub repository secrets under Settings -> Secrets and variables -> Actions:
 
 - `GEMINI_API_KEY`
-- `GEMINI_FILE_SEARCH_STORE_NAME`
+- `GEMINI_FILE_SEARCH_STORE_NAME` - use the same `fileSearchStores/...` resource name as Render.
 
 Use the Actions tab to trigger `Daily OptiBot Indexer` manually for a smoke test.
 
-Because GitHub-hosted runners are ephemeral, `GEMINI_FILE_SEARCH_STORE_NAME` should point at the current Gemini File Search store. This avoids creating a new store on every scheduled run.
+Because GitHub-hosted runners are ephemeral, `GEMINI_FILE_SEARCH_STORE_NAME` should point at the current Gemini File Search store resource. The uploader reuses that store and refreshes changed documents so Render does not end up pointing at a deleted store.
 
 ## Screenshot
 
