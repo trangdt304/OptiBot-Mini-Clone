@@ -634,14 +634,6 @@ def is_gemini_store_unavailable_error(exc: Exception) -> bool:
     )
 
 
-def delete_gemini_file_search_store(client: Any, store_name: str) -> None:
-    try:
-        client.file_search_stores.delete(name=store_name, config={"force": True})
-        logging.info("Deleted old Gemini File Search store %s", store_name)
-    except Exception as exc:  # noqa: BLE001 - best effort cleanup only.
-        logging.warning("Could not delete old Gemini File Search store %s: %s", store_name, exc)
-
-
 def delete_gemini_documents_by_display_name(client: Any, store_name: str, display_names: set[str]) -> int:
     if not display_names:
         return 0

@@ -30,6 +30,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Verify safe Gemini store updater
+        run: |
+          echo "GitHub SHA: $GITHUB_SHA"
+          echo "Checked out SHA: $(git rev-parse HEAD)"
+          if grep -n "file_search_stores.delete" main.py; then
+            echo "Refusing to run: uploader must not delete Gemini File Search stores."
+            exit 1
+          fi
+          if grep -n "Deleted old Gemini File Search store" main.py; then
+            echo "Refusing to run: old destructive Gemini store cleanup code is still present."
+            exit 1
+          fi
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
